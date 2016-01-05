@@ -1,0 +1,19 @@
+root:
+  users: ['admin']
+  children:
+    - __kemal__:
+        users: ['*']
+    - media:
+        users: ['*']
+    - portfolio:
+        users: ['john']
+    - blog:
+        users: ['brown']
+        children:
+          - post1:
+              users: ['george', 'wilma', 'mary']
+          - post2:
+              users: ['mary']
+              children:
+                - folder5:
+                    users: ['george']
